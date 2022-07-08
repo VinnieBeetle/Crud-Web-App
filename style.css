@@ -1,0 +1,42 @@
+/*
+Vincent Ho
+style.css
+7/8/22
+learning experiance for web crud
+
+"." infront means it is looking for a class (class div named title)
+"#" is the div id
+*/
+.title{
+	text-align: center;
+	margin-top: 25px;
+}
+
+.form{
+	margin: auto;
+	max-width: 80%;
+	text-align: center;
+}
+
+input[type ='submit'], button, [aria-label]{
+	cursor: pointer;
+}
+
+#edit-box{
+	display: none;
+	max-width: 80%;
+	margin: auto;
+	margin-top: 10px;
+}
+
+/*for cell items*/
+td{
+	background-color: aliceblue;
+	padding-right: 10px;
+	text-align: left;
+	
+}
+
+.to-do{
+	background: transparent !important;
+}

@@ -1,0 +1,73 @@
+<!--
+Vincent Ho
+index.html
+7/8/22
+learning experiance for web crud
+-->
+<html lang="en-US">
+	<head>
+		<meta charset = "UTF-8">
+		<title>CRUD To Do List</title>
+		
+		<!--linking to the css file-->
+		<link rel ="stylesheet" 
+		type="text/css" 
+		href="style.css">
+		
+		<!--linking to bootstrap-->
+		<link rel="stylesheet" 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+		crossorigin="anonymous">
+		
+	</head>
+	<body>
+		<!--Contains the title text-->
+		<div class = "title">
+			<h1>CRUD To Do List</h1>
+			<p> hello people of the green and blue planet known as earth</p>
+		</div>
+		
+		
+		<!--take in data-->
+		<div class = "form">
+			<form action= "javascript:void(0);" method ="POST"
+			onsubmit ="app.Add()">
+				<input type ="text" id ="add-todo"
+				placeholder ="Thing To-Do">
+				<input type ="submit" value ="Add" class ="btn 
+				btn-primary">
+			</form>	
+			<p>You have to-do:</p>
+			<p id ="counter"></p>
+			
+			<table>
+				<!--Makes row -->
+				<tr class ="to-do">
+					<!--Table Header-->
+					<th><h3>To-Do</h3></th>
+				</tr>
+				
+				<tbody id ="tasks">				
+				</tbody>
+			</table>
+		</div>
+		
+		<!--Edit to-do list (is hidden until there is something)-->
+		<div id ="edit-box" role ="aria-hidden">
+			<form action ="javascript:void(0);" method ="POST"
+			id ="save-edit">
+				<input type ="text" id = "edit-todo">
+				<input type ="submit" value = "save" class ="btn 
+				btn-success">
+				<a onclick ="CloseInput()" aria-label ="Close">&#10005;
+				<!--Give a little x-->
+				</a>
+			</form>
+		</div>
+		
+		<script src ="script.js"></script>
+		
+	</body>
+		
+</html>
